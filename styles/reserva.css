@@ -1,0 +1,260 @@
+
+
+@import url('style.css');
+
+.banner-reserva {
+    position: relative;
+    padding: 90px 20px 110px;
+    background-image: linear-gradient(rgba(18, 20, 15, 0.7), rgba(18, 20, 15, 0.8)), url('../assets/images/rooftop.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.banner-reserva h1 {
+    font-family: var(--fonte-serifa);
+    font-size: 52px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: var(--cor-verde-destaque);
+    letter-spacing: 1px;
+}
+
+.banner-reserva p {
+    font-size: 17px;
+    color: #e5e2da;
+    max-width: 620px;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.secao-formulario {
+    padding-bottom: 100px;
+    margin-top: -60px;
+    position: relative;
+    z-index: 10;
+}
+
+.card-formulario {
+    background-color: var(--cor-card-fundo);
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 50px 48px;
+    border-radius: 0;
+    border: 1px solid var(--cor-borda);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
+}
+
+.cabecalho-form {
+    text-align: center;
+    margin-bottom: 38px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--cor-borda-sutil);
+}
+
+.cabecalho-form h2 {
+    font-family: var(--fonte-serifa);
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--cor-texto-principal);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.cabecalho-form p {
+    font-size: 14px;
+    color: var(--cor-texto-suave);
+}
+
+.grade-campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 28px;
+}
+
+.campo-largura-total {
+    grid-column: 1 / -1;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.grupo-campo label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--cor-texto-principal);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.obrigatorio {
+    color: #a83834;
+    font-weight: bold;
+}
+
+.grupo-campo input,
+.grupo-campo select,
+.grupo-campo textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #cdc7bb;
+    border-radius: 0;
+    font-size: 14.5px;
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto-principal);
+    background-color: #ffffff;
+    transition: var(--transicao);
+}
+
+.grupo-campo input:focus,
+.grupo-campo select:focus,
+.grupo-campo textarea:focus {
+    outline: none;
+    border-color: var(--cor-verde-escuro);
+    box-shadow: 0 0 0 1px var(--cor-verde-escuro);
+}
+
+.grupo-campo textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.area-botao {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 14px;
+}
+
+.btn-enviar-reserva {
+    background-color: var(--cor-verde-destaque);
+    color: #172210;
+    border: 1px solid var(--cor-verde-destaque);
+    padding: 15px 36px;
+    border-radius: 0;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transicao);
+}
+
+.btn-enviar-reserva:hover {
+    background-color: #172210;
+    color: #ffffff;
+    border-color: #172210;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 20, 15, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-overlay.visivel {
+    display: flex;
+    animation: fadeIn 0.25s ease;
+}
+
+.modal-conteudo {
+    background-color: #ffffff;
+    max-width: 500px;
+    width: 100%;
+    padding: 44px 38px;
+    border-radius: 0;
+    border: 1px solid var(--cor-borda);
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.modal-icone {
+    width: 48px;
+    height: 48px;
+    color: var(--cor-verde-escuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.modal-titulo {
+    font-family: var(--fonte-serifa);
+    font-size: 26px;
+    color: var(--cor-texto-principal);
+    margin-bottom: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.modal-mensagem {
+    font-size: 15px;
+    color: var(--cor-texto-suave);
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.btn-modal-fechar {
+    background-color: var(--cor-verde-destaque);
+    color: #172210;
+    border: 1px solid var(--cor-verde-destaque);
+    padding: 12px 32px;
+    border-radius: 0;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.btn-modal-fechar:hover {
+    background-color: #172210;
+    color: #ffffff;
+    border-color: #172210;
+}
+
+@media (max-width: 768px) {
+    .banner-reserva {
+        padding: 60px 16px 85px;
+    }
+
+    .banner-reserva h1 {
+        font-size: 36px;
+    }
+
+    .card-formulario {
+        padding: 30px 20px;
+        margin-top: -45px;
+    }
+
+    .grade-campos {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .btn-enviar-reserva {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-labelledby="t d">
+  <title id="t">Saint-Michel</title>
+  <desc id="d">Emblema do restaurante Saint-Michel: espada entre ramos de louro, símbolo da alta gastronomia franco-brasileira.</desc>
+  <defs>
+    <linearGradient id="verde" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#98ca6f"/>
+      <stop offset="1" stop-color="#4c6d30"/>
+    </linearGradient>
+    <linearGradient id="ouro" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9bf93"/>
+      <stop offset="1" stop-color="#a59e7c"/>
+    </linearGradient>
+    <path id="arcoTopo" d="M 60 200 A 140 140 0 0 1 340 200"/>
+    <path id="arcoBase" d="M 48 200 A 152 152 0 0 0 352 200"/>
+    <!-- folha de louro -->
+    <path id="folha" d="M0 0 C 8 -10 8 -26 0 -38 C -8 -26 -8 -10 0 0 Z"/>
+  </defs>
+
+  <!-- Fundo e anéis -->
+  <circle cx="200" cy="200" r="194" fill="#fbf9f5"/>
+  <circle cx="200" cy="200" r="194" fill="none" stroke="#4c6d30" stroke-width="6"/>
+  <circle cx="200" cy="200" r="182" fill="none" stroke="#a59e7c" stroke-width="1.5"/>
+  <circle cx="200" cy="200" r="104" fill="none" stroke="#a59e7c" stroke-width="1.5"/>
+
+  <!-- Textos em arco -->
+  <text font-family="'Cormorant Garamond','Playfair Display',Georgia,serif" font-weight="700" font-size="40" letter-spacing="7" fill="#4c6d30" text-anchor="middle">
+    <textPath href="#arcoTopo" startOffset="50%">SAINT-MICHEL</textPath>
+  </text>
+  <text font-family="'Inter',Arial,sans-serif" font-weight="600" font-size="15" letter-spacing="5" fill="#52574a" text-anchor="middle">
+    <textPath href="#arcoBase" startOffset="50%" side="left">FRANCO-BRASILEIRA</textPath>
+  </text>
+
+  <!-- Estrelas separadoras -->
+  <g fill="#a59e7c">
+    <path transform="translate(42 200)" d="M0 -7 L2 -2 L7 0 L2 2 L0 7 L-2 2 L-7 0 L-2 -2Z"/>
+    <path transform="translate(358 200)" d="M0 -7 L2 -2 L7 0 L2 2 L0 7 L-2 2 L-7 0 L-2 -2Z"/>
+  </g>
+
+  <!-- Ramos de louro -->
+  <g id="ramo" fill="url(#verde)" stroke="none">
+    <path d="M200 296 C 140 290 108 250 104 200" fill="none" stroke="#4c6d30" stroke-width="3" stroke-linecap="round"/>
+    <use href="#folha" transform="translate(150 285) rotate(-110) scale(.9)"/>
+    <use href="#folha" transform="translate(132 272) rotate(-60) scale(.9)"/>
+    <use href="#folha" transform="translate(120 255) rotate(-125) scale(.9)"/>
+    <use href="#folha" transform="translate(112 238) rotate(-65) scale(.9)"/>
+    <use href="#folha" transform="translate(106 218) rotate(-130) scale(.85)"/>
+    <use href="#folha" transform="translate(104 200) rotate(-70) scale(.85)"/>
+  </g>
+  <use href="#ramo" transform="translate(400 0) scale(-1 1)"/>
+
+  <!-- Espada -->
+  <g>
+    <path d="M200 100 L210 118 L210 236 L190 236 L190 118 Z" fill="url(#verde)" stroke="#4c6d30" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M200 112 L200 234" stroke="#fbf9f5" stroke-width="2" opacity=".7"/>
+    <!-- guarda -->
+    <path d="M162 240 Q 200 228 238 240 L238 250 Q 200 240 162 250 Z" fill="url(#ouro)" stroke="#8a8363" stroke-width="1.5"/>
+    <circle cx="162" cy="245" r="5" fill="#a59e7c"/>
+    <circle cx="238" cy="245" r="5" fill="#a59e7c"/>
+    <!-- empunhadura -->
+    <rect x="195" y="250" width="10" height="28" rx="3" fill="#4c6d30"/>
+    <circle cx="200" cy="286" r="8" fill="url(#ouro)" stroke="#8a8363" stroke-width="1.5"/>
+  </g>
+
+  <!-- Flor-de-lis no topo -->
+  <g transform="translate(200 150)" fill="#fbf9f5" stroke="#4c6d30" stroke-width="1.5" stroke-linejoin="round">
+    <path d="M0 -26 C 9 -14 9 -2 0 12 C -9 -2 -9 -14 0 -26 Z"/>
+    <path d="M-2 4 C -16 -14 -30 -4 -22 10 C -18 16 -8 14 -2 10 Z"/>
+    <path d="M2 4 C 16 -14 30 -4 22 10 C 18 16 8 14 2 10 Z"/>
+    <path d="M-12 14 L12 14 L12 20 L-12 20 Z" fill="#a59e7c"/>
+  </g>
+</svg>
